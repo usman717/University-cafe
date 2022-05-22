@@ -1,0 +1,155 @@
+# include <iostream>
+using namespace std;
+void cafe_menu()  //This function is for showing cafe menu
+{
+	cout<<"\t\t--------:CAFE MENU:--------"<<endl;
+	cout<<"Press(1-11)\n";
+	cout<<"1.For Biryani=200\t2.For Chat=100\n3.For Samosa=30\t\t4.For Chips=50\n";
+	cout<<"5.For Biscuits=25\t6.For Karahi=500\n7.For Noodles=150\t8.For Nahari=750\n";
+	cout<<"9.For Juice=70\t\t10.For Pepsi=80\n11.For Water=60"<<endl;	
+	
+}          //Here (cafe menu) function closes
+
+
+int taking_input_for_items(int a)    //This function is for taking inputs for items
+{
+	cin>>a;
+	return a;
+}                           //Here (taking_input_for_items) function closes
+
+int main()    //From Here our main function starts
+{
+	string Items[11]={"Biryani","Chat","Samosa","Chips","Biscuits","Karahi","Noodles","Nahari","Juice","Pepsi","Water"};   //Here we make string type array for items names
+	int Prices[11]={200,100,30,50,25,500,150,750,70,80,60};   //Here wemake int type array to store items prices
+	
+	int choice1,quantity1,x=1;    //Here we declare variables for int
+	float Bill=0;                 //Here we declare variable for float
+	               
+	while(x==1)                   //From here our while loop starts
+	{
+		cout<<"\n\n\t\tWhat do you like to purcase?\n\n";
+		
+	    cafe_menu();              //Here we call (cafe menu) function
+	    cout<<endl;
+	    
+	    int inp=taking_input_for_items(choice1);  //Here we call and store (taking_input_for_items) function
+	    cout<<endl;
+	    
+	    switch(inp)               //Here we use switch 
+	    {
+		    case 1:               //Here our cases starts
+		        cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[0]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+		        Bill=Prices[0]*quantity1+Bill;
+		   
+		        break;
+		
+		    case 2:
+		        cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[1]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+		        Bill=Prices[1]*quantity1+Bill;
+		    
+		        break;
+		
+		    case 3:
+			    cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[2]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+		        Bill=Prices[2]*quantity1+Bill;
+		   
+		        break;
+	    	case 4:
+	    		cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[3]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+	    	    Bill=Prices[3]*quantity1+Bill;
+		    
+	    	    break;
+	    	case 5:
+	    	    cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[4]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+	    	    Bill=Prices[4]*quantity1+Bill;
+		    
+	     	    break;
+	     	case 6:
+	    		cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[5]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+	    	    Bill=Prices[5]*quantity1+Bill;
+		    
+	       	    break;
+	    	case 7:
+	     		cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[6]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+	    	    Bill=Prices[6]*quantity1+Bill;
+		    
+	    	    break;
+	    	case 8:
+	    	    cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[7]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+	    	    Bill=Prices[7]*quantity1+Bill;
+		    
+	    	    break;
+	        case 9:
+	    		cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[8]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+	    	    Bill=Prices[8]*quantity1+Bill;
+		    
+		        break;
+	    	case 10:
+	    		cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[9]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+    		    Bill=Prices[9]*quantity1+Bill;
+		    
+		        break;
+		    case 11:
+	     		cout<<"How much quanity?\n\n";
+		        cin>>quantity1;
+		        cout<<"\nYour order is: "<<Items[10]<<"\tand Quantity is: "<<quantity1<<endl<<endl;
+	    	    Bill=Prices[10]*quantity1+Bill;
+		   
+	    	    break;
+	    	default:
+	    		cout<<"Invalid Entry!\nPlease Enter value betweem 1 to 11 (1-11)\n\n";
+		}    //Here switch ends
+		
+	    cout<<"Press 0 for Bill show\nPress 1 for Buy more Items\n\n";
+		cin>>x;
+		cout<<endl<<endl;
+		    while(x!=0&&x!=1)
+		    {
+			    cout<<"Invalid entry!\nPlease Enter correct entry(0-1)\n\n";
+			    cout<<"Press 0 for Bill show\nPress 1 for Buy more Items\n\n";
+		        cin>>x;
+		        cout<<endl<<endl;
+		        
+	    	}     //Here nested while loop ends
+			   
+		        if(x==0)  //If-else statements starts
+		        {
+		            cout<<"Your Total Bill is: "<<Bill; //Here we show total bill	
+		        }
+		        else if(x==1)
+		        {
+		        }
+	        	else
+	        	{
+			
+		        cout<<"Your Total Bill is: "<<Bill; //Here we show total bill
+		        cout<<endl<<endl;
+	         	}    //Here if else statements ends
+	    
+   }    //Here while loop ends	   
+		
+		
+	return 0;	    
+}    //Here our main function closes
+
+   
